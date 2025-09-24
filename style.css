@@ -1,0 +1,142 @@
+html {
+  font-size: 10px;
+  background: url('./background_gato.jpg') bottom center;
+  background-size: cover;
+}
+
+body,html {
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+}
+
+.keys {
+  display: flex;
+  flex-wrap: wrap;
+  flex: 1;
+  min-height: 100vh;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.key {
+  border: .4rem solid black;
+  border-radius: .5rem;
+  margin: 1rem;
+  font-size: 1.5rem;
+  padding: 1rem .5rem;
+  transition: all .07s ease;
+  width: 9vw;
+  min-width: 80px;
+  max-width: 120px;
+  text-align: center;
+  color: white;
+  background: rgba(139, 139, 139, 0.4);
+  text-shadow: 0 0 .5rem black;
+}
+
+.playing {
+  transform: scale(1.1);
+  border-color: #00ccff;
+  box-shadow: 0 0 1rem #00ccff;
+}
+
+kbd {
+  display: block;
+  font-size: 4rem;
+}
+
+.sound {
+  font-size: 1.2rem;
+  text-transform: uppercase;
+  letter-spacing: .1rem;
+  color: #ffc600;
+}
+
+.recorder {
+  position: fixed;
+  bottom: 10%;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.recorder button {
+  border: .3rem solid black;
+  border-radius: .5rem;
+  margin: 0 1rem;
+  font-size: 2rem;
+  padding: 1rem 2.5rem;
+  background: rgba(141, 139, 139, 0.742);
+  color: #ffc600;
+  text-shadow: 0 0 .5rem black;
+  box-shadow: 0 0 .5rem #ff00bb;
+  cursor: pointer;
+  transition: all .1s;
+  outline: none;
+}
+
+.recorder button:active,
+.recorder button:focus {
+  transform: scale(1.07);
+  border-color: #00ccff;
+  box-shadow: 0 0 1rem #00ccff;
+}
+
+.recorder button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+  box-shadow: none;
+}
+
+/* Responsividade para telas menores */
+@media (max-width: 700px) {
+  .keys {
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    min-height: 60vh;
+  }
+  .key {
+    width: 22vw;
+    min-width: 60px;
+    max-width: 90px;
+    font-size: 1.1rem;
+    padding: 0.7rem 0.3rem;
+    margin: 0.5rem 0.2rem;
+  }
+  .recorder {
+    bottom: 5%; /* Fica mais próximo da base */
+  }
+  .recorder button {
+    font-size: 1.2rem;
+    padding: 0.7rem 1.2rem;
+    margin: 0 0.5rem;
+  }
+}
+
+@media (max-width: 450px) {
+  .keys {
+    gap: 0.2rem;
+    min-height: 40vh;
+  }
+  .key {
+    width: 28vw;
+    min-width: 40px;
+    max-width: 70px;
+    font-size: 0.9rem;
+    padding: 0.5rem 0.1rem;
+    margin: 0.2rem 0.1rem;
+  }
+  .recorder {
+    position: static; /* Sai do modo fixo e entra no fluxo normal */
+    transform: none;
+    margin-top: 1.5rem;
+    text-align: center;
+  }
+  .recorder button {
+    font-size: 1rem;
+    padding: 0.5rem 0.7rem;
+    margin: 0 0.2rem;
+  }
+}
