@@ -1,7 +1,7 @@
 # Divirta-se com o Gato-Drum!
 
-Este é um projeto divertido para criar, gravar e reproduzir beats usando o teclado (incluindo sons de gatinhos! 😻)
-
+Este é um projeto divertido para criar, gravar e reproduzir beats usando o teclado (incluindo sons de gatinhos! 😻) 
+<img width="1920" height="1080" alt="gato-drum" src="https://github.com/user-attachments/assets/bee9f309-cdbb-44aa-b4bf-73fae1ef7716" />
 
 ## Funcionalidades
 
